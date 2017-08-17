@@ -3,9 +3,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
+
         <title> Explorateur de fichier</title>
         <!-- libaries css-->
         <link type="text/css" rel="stylesheet" href="libraries/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
+
+        <title></title>
+           <!-- libaries css-->
+            <link type="text/css" rel="stylesheet" href="libraries/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
+
 
         <!-- libraries js -->        
         <script type="text/javascript" src="libraries/jQuery/jquery-3.2.1.js"></script>
@@ -14,13 +20,21 @@
         <script type="text/javascript" src="javascript.js"></script>
 
         <!-- custom css  -->
+
         <link type="text/css" rel="stylesheet" href="style.css" />
 
 
 
+            <link type="text/css" rel="stylesheet" href="style.css" />
+        
+        <!-- custom js  -->
+            
+           
+
     </head>
     <body>
         <div class="entete">
+
 
             <div class="container">
                 <div class="row">
@@ -50,6 +64,12 @@
 
         <div class="contenu">
 
+
+
+        </div>
+        <div class="contenu">
+            <p class="fichier"></p>
+            <script type="text/javascript" src="javascript.js"></script>
 
         </div>
     </body>
