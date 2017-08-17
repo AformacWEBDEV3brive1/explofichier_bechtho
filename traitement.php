@@ -1,8 +1,12 @@
 <?php
+$time = $_POST["function"];
+$time();
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+function fichier(){
+    $dossier = '/var/www';
+$contenu_dossier = scandir($dossier);
+print_r($contenu_dossier);
+}
+
+?>
