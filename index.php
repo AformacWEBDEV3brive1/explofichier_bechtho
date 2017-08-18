@@ -8,9 +8,9 @@
         <!-- libaries css-->
         <link type="text/css" rel="stylesheet" href="libraries/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
 
-        <title></title>
-           <!-- libaries css-->
-            <link type="text/css" rel="stylesheet" href="libraries/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
+
+        <!-- libaries css-->
+        <link type="text/css" rel="stylesheet" href="libraries/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
 
 
         <!-- libraries js -->        
@@ -25,42 +25,51 @@
 
 
 
-            <link type="text/css" rel="stylesheet" href="style.css" />
-        
+        <link type="text/css" rel="stylesheet" href="style.css" />
+
         <!-- custom js  -->
-            
-           
+
+
 
     </head>
     <body>
         <div class="entete">
 
 
-            <div class="container">
+            <div class="container navbar1">
                 <div class="row">
-                    
-                    <button type="button" class="btn btn-secondary"> <-- </button>
-                    <button type="button" class="btn btn-secondary"> --> </button>
-                    <button type="submit" class="btn btn-secondary"> / </button>
-                    <!-- Ajouter <nav></nav> pour avoir un effet classe si jamais -->
-                        <a class="navbar-brand"></a>
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Rechercher">
-                            <button class="btn btn-outline-default my-2 my-sm-0" type="submit">OK</button>
-                        </form>
-                   <!-- Ajouter</nav> pour avoir un effet classe si jamais -->
-                   <form>
-                   <input class="form-control mr-sm-2" type="text" placeholder="Nom du dossier">
-                   </form>
-                   
-                   
-                   
-                </div>  
+
+                    <button type="button" class="btn btn-secondary col-2"> <-- </button>
+                    <button type="button" class="btn btn-secondary col-2"> --> </button>
+                    <button type="submit" class="btn btn-secondary col-1"> / </button>                  
+                    <input class="form-control col-5" type="text" placeholder="Rechercher">
+                    <button class="btn btn-outline-default col-1" type="submit">OK</button>
+
+                </div>
+
+                <div class="row">
+
+                    <input class="form-control  col-6 offset-3  " type="text" placeholder="Nom du dossier">
+
+                </div>       
             </div>
             
+            <div class="container navbar2">
+                <div class="row">
+                    <button type="button" class="btn btn-secondary col-2"> <-- </button>
+                    <button type="button" class="btn btn-secondary col-2"> --> </button>
+                    <button type="submit" class="btn btn-secondary col-1"> / </button>
+                    <input class="form-control  col-3 " type="text" placeholder="Nom du dossier">
+                    <input class="form-control col-3" type="text" placeholder="Rechercher">
+                    <button class="btn btn-outline-default col-1" type="submit">OK</button>                 
+                </div>       
+            </div>
+
+        </div>
 
 
-        </div> 
+
+
 
         <div class="contenu">
 
