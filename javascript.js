@@ -1,7 +1,7 @@
 
 
 function fichier() {
-alert("couc");
+
     $.ajax({
         url: 'traitement.php',
         type: 'POST',
@@ -15,5 +15,5 @@ alert("couc");
     });
 
 }
-
 fichier();
+
