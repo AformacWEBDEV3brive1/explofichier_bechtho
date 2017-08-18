@@ -24,6 +24,11 @@
         </div>
         <div class="contenu">
             <p class="fichier"></p>
+            <p class="getInfoTab"></p>
+            
+            
+            
+            
             <script type="text/javascript" src="javascript.js"></script>
         </div>
     </body>
