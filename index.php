@@ -7,10 +7,10 @@
         <title> Explorateur de fichier</title>
         <!-- libaries css-->
         <link type="text/css" rel="stylesheet" href="libraries/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
-
-
-        <!-- libaries css-->
-        <link type="text/css" rel="stylesheet" href="libraries/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="libraries/font-awesome-4.7.0/css/font-awesome.css"/>
+                
+           <!-- libaries css-->
+            <link type="text/css" rel="stylesheet" href="libraries/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
 
 
         <!-- libraries js -->        
@@ -20,10 +20,6 @@
         <script type="text/javascript" src="javascript.js"></script>
 
         <!-- custom css  -->
-
-        <link type="text/css" rel="stylesheet" href="style.css" />
-
-
 
         <link type="text/css" rel="stylesheet" href="style.css" />
 
@@ -71,15 +67,83 @@
 
 
 
-        <div class="contenu">
-
+        <div class="contenu container">
+			<div class="row">
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier A</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier B</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier C</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier D</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier E</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier F</label>
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier G</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier H</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier I</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier J</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier K</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
+            	<label>dossier L</label>
+            </div>
+          </div> 
+        
+        <div class="row">
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-file-o fa-5x" aria-hidden="true"></i>
+            	<label>fichier A</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-file-o fa-5x" aria-hidden="true"></i>
+            	<label>fichier B</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-file-o fa-5x" aria-hidden="true"></i>
+            	<label>fichier C</label>
+            </div>
+            <div class="col-12 col-md-1 offset-md-1">
+            	<i class="fa fa-file-o fa-5x" aria-hidden="true"></i>
+            	<label>fichier D</label>
+            </div>
+           </div>
 
 
         </div>
         <div class="contenu">
             <p class="fichier"></p>
-            <script type="text/javascript" src="javascript.js"></script>
-
         </div>
     </body>
 </html>
