@@ -24,10 +24,3 @@ foreach($contenu_dossier as $value){
 }
 
 }
-
-
-
-function getInfoTab(){
-    
-}
-?>
