@@ -29,9 +29,9 @@
 
     </head>
     <body>
+        
+        <!-- navbar -->
         <div class="entete">
-
-
             <div class="container navbar1">
                 <div class="row">
 
@@ -60,8 +60,9 @@
                     <button class="btn btn-outline-default col-1" type="submit">OK</button>                 
                 </div>       
             </div>
-
         </div>
+        
+        <!-- Dossier/Fichier -->
         <div class="container contenu padding">
             <p class="fichier"></p>
             <div class="position_actuelle">
