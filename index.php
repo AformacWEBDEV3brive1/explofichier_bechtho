@@ -29,15 +29,15 @@
 
     </head>
     <body>
+        
+        <!-- navbar -->
         <div class="entete">
-
-
             <div class="container navbar1">
                 <div class="row">
 
                     <button type="button" class="btn btn-secondary col-2"> <-- </button>
                     <button type="button" class="btn btn-secondary col-2"> --> </button>
-                    <button type="submit" class="btn btn-secondary col-1"> / </button>                  
+                    <button type="submit" class="btn btn-secondary col-1"> / </button>              
                     <input class="form-control col-5" type="text" placeholder="Rechercher">
                     <button class="btn btn-outline-default col-1" type="submit">OK</button>
 
@@ -60,90 +60,19 @@
                     <button class="btn btn-outline-default col-1" type="submit">OK</button>                 
                 </div>       
             </div>
-
         </div>
-
-
-
-
-
-        <div class="contenu container">
-			<div class="row">
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier A</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier B</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier C</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier D</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier E</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier F</label>
-            </div>
-          </div> 
-          <div class="row">
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier G</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier H</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier I</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier J</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier K</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-folder-o fa-5x" aria-hidden="true"></i>
-            	<label>dossier L</label>
-            </div>
-          </div> 
         
-        <div class="row">
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-file-o fa-5x" aria-hidden="true"></i>
-            	<label>fichier A</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-file-o fa-5x" aria-hidden="true"></i>
-            	<label>fichier B</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-file-o fa-5x" aria-hidden="true"></i>
-            	<label>fichier C</label>
-            </div>
-            <div class="col-12 col-md-1 offset-md-1">
-            	<i class="fa fa-file-o fa-5x" aria-hidden="true"></i>
-            	<label>fichier D</label>
-            </div>
-           </div>
-
-
-        </div>
-        <div class="contenu">
+        <!-- Dossier/Fichier -->
+        <div class="container contenu padding">
             <p class="fichier"></p>
-        </div>
+            <div class="position_actuelle">
+                <p> </p>              
+            </div>
+            
+         </div>   
+            
+            
+            <script type="text/javascript" src="javascript.js"></script>
+        
     </body>
 </html>
