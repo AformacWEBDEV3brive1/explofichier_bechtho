@@ -1,6 +1,6 @@
 <?php
 
-$function = $_POST["function"]; // Fonction variable ui lance la fonction "fonction" dans l'ajax.
+$function = $_POST["function"]; // Fonction variable qui lance la fonction "fonction" dans l'ajax.
 $function();
 
 function fichier() {
@@ -8,22 +8,20 @@ function fichier() {
     $id = $_POST["id"];
     $curent_path = $_POST["source"];
     $compteur = 0;
-    $countId = 0;
+    //$nom_utilisateur= php_uname("n"); 
     $dossier_scan = '/home/rackmaninov';
 
     // Condition pour déterminer les chemins des dossiers.
     if ($_POST["id"] == true) {
         $dossier_scan = $curent_path . $id;
-    } else {
-        $dossier_scan = '/home/rackmaninov';
     }
 
 
     $contenu_dossier = scandir($dossier_scan); //Scan le dossier et le retranscrit en tableau.
-    echo "<div class =\"row\">"; // Ajout d'Html en PHP pour crer la première ligne "row"
+    echo "<div class =\"row\">"; // Ajout d'Html en PHP pour crer la première ligne "row".
     // Boucle de lecture du tableau
     foreach ($contenu_dossier as $nom) {
-        // Création d'une nouvelle ligne "row" toutes les 6 ligne 
+        // Création d'une nouvelle ligne "row" toutes les 6 lignes.
         if ($compteur == 6) {
             echo "</div><div class =\"row\">";
             $compteur = 0;
@@ -37,7 +35,7 @@ function fichier() {
         $anti_slash = array("\ ", "\(", "\)", "\'");
         $nom = str_replace($espace, $anti_slash, $nom);
         
-        // Différencie la différence entre fichier et dossier avec un boolean.
+        // Montre la différence entre fichier et dossier avec un boolean.
         $file = is_dir($curent_path . $id . "/" . $nom);
         if ($file == true) {
 
@@ -49,7 +47,6 @@ function fichier() {
                      //création de div avec class bootstrap     // Donne l'id        // Donne son icone         // Change le nbr de caractères affiché
         // incrémentation des compteurs de création de ligne.
         $compteur++;
-        $countId++;
     }
     
     $position_actuelle = $dossier_scan; //Chemin actuel.
