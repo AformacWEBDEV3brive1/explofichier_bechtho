@@ -1,23 +1,32 @@
 
 
 function fichier() {
-
+    var url = "/home/rackmaninov/";
     $.ajax({
+
         url: 'traitement.php',
         type: 'POST',
-        data: {"function": "fichier", "source": "source" + "id"},
+        data: {"function": "fichier", 'source': url},
         success: function (result) {
-             $(".fichier").html(result);
+            $(".fichier").html(result);
+            $('.postion_actuelle').html(result);
+            console.log(result);
             $(".dossier").click(function () {
                 var id = $(this).attr("id");
-                alert(id); // gets the id of a clicked link that has a class of menu
+                $.ajax({
+
+                    url: 'traitement.php',
+                    type: 'POST',
+                    data: {"function": "fichier", 'source': url, "id": id},
+                    success: function (result) {
+                        $(".fichier").html(result);
+                    }
+                });
             });
-           
-
         }
-
     });
 }
+
 /* $.ajax({
  url: 'traitement.php',
  type: 'GET',
@@ -33,7 +42,6 @@ function fichier() {
  }*/
 
 fichier();
-
 /*function getIfoTab() {
  
  $.ajax({
@@ -41,12 +49,7 @@ fichier();
  type: 'POST',
  data: {"function": "getInfoTab"},
  success: function (result) {
- 
- $(".getInfoTab").html(result);
- 
- }
- 
- });
+
  
  }
  */
