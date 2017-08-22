@@ -3,21 +3,24 @@
 $function = $_POST["function"]; // Fonction variable qui lance la fonction "fonction" dans l'ajax.
 $function();
 
+
 function fichier() {
     // Déclaration des variables.
     $id = $_POST["id"];
     $curent_path = $_POST["source"];
+    $new_path = $_POST["new_path"];
     $compteur = 0;
     //$nom_utilisateur= php_uname("n"); 
-    $dossier_scan = '/home/rackmaninov';
+    $dossier_scan = '/home/rackmaninov/';
 
     // Condition pour déterminer les chemins des dossiers.
-    if ($_POST["id"] == true) {
-        $dossier_scan = $curent_path . $id;
+    if (isset($_POST["source"])) {
+        //$dossier_scan = $curent_path . $id;
+        $new_path = $curent_path;
     }
 
-
-    $contenu_dossier = scandir($dossier_scan); //Scan le dossier et le retranscrit en tableau.
+    //$contenu_dossier = scandir($dossier_scan); //Scan le dossier et le retranscrit en tableau.
+    $contenu_dossier = scandir($new_path);
     echo "<div class =\"row\">"; // Ajout d'Html en PHP pour crer la première ligne "row".
     // Boucle de lecture du tableau
     foreach ($contenu_dossier as $nom) {
@@ -36,7 +39,8 @@ function fichier() {
         $nom = str_replace($espace, $anti_slash, $nom);
         
         // Montre la différence entre fichier et dossier avec un boolean.
-        $file = is_dir($curent_path . $id . "/" . $nom);
+        //$file = is_dir($curent_path . $id . "/" . $nom);
+        $file = is_dir($new_path . "/" . $nom);
         if ($file == true) {
 
             $font_fichier = "<i class=\"fa fa-folder-o fa-5x\" aria-hidden=\"true\"></i>";
@@ -52,4 +56,10 @@ function fichier() {
     $position_actuelle = $dossier_scan; //Chemin actuel.
 }
 
+
+
 ?>
+
+
+
+
