@@ -1,10 +1,15 @@
-.repdoss{
-    
-    
-}
- #body{
-    background-color: #0C7967;
+@media only screen and (min-width: 768px) {
+    .navbar1{
+        display: none;
+        
+    }
 }
 .contenu{
 	margin-top:100px;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar2{
+        display: none;
+    }
 }
