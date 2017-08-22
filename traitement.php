@@ -1,6 +1,6 @@
 <?php
 
-$function = $_POST["function"]; // Fonction variable ui lance la fonction "fonction" dans l'ajax.
+$function = $_POST["function"]; // Fonction variable qui lance la fonction "fonction" dans l'ajax.
 $function();
 
 
@@ -8,23 +8,23 @@ function fichier() {
     // Déclaration des variables.
     $id = $_POST["id"];
     $curent_path = $_POST["source"];
+    $new_path = $_POST["new_path"];
     $compteur = 0;
-    $countId = 0;
-    $dossier_scan = $curent_path . $id;
+    //$nom_utilisateur= php_uname("n"); 
+    $dossier_scan = '/home/ezaltar/';
 
     // Condition pour déterminer les chemins des dossiers.
-    if ($_POST["id"] == true) {
-        $dossier_scan = $curent_path . $id;
-        
-    } else {
-        $dossier_scan = '/home/ezaltar';
+    if (isset($_POST["source"])) {
+        //$dossier_scan = $curent_path . $id;
+        $new_path = $curent_path;
     }
 
-    $contenu_dossier = scandir($dossier_scan); //Scan le dossier et le retranscrit en tableau.
-    echo "<div class =\"row\">"; // Ajout d'Html en PHP pour crer la première ligne "row"
+    //$contenu_dossier = scandir($dossier_scan); //Scan le dossier et le retranscrit en tableau.
+    $contenu_dossier = scandir($new_path);
+    echo "<div class =\"row\">"; // Ajout d'Html en PHP pour crer la première ligne "row".
     // Boucle de lecture du tableau
     foreach ($contenu_dossier as $nom) {
-        // Création d'une nouvelle ligne "row" toutes les 6 ligne 
+        // Création d'une nouvelle ligne "row" toutes les 6 lignes.
         if ($compteur == 6) {
             echo "</div><div class =\"row\">";
             $compteur = 0;
@@ -38,8 +38,9 @@ function fichier() {
         $anti_slash = array("\ ", "\(", "\)", "\'");
         $nom = str_replace($espace, $anti_slash, $nom);
         
-        // Différencie la différence entre fichier et dossier avec un boolean.
-        $file = is_dir($curent_path . $id . "/" . $nom);
+        // Montre la différence entre fichier et dossier avec un boolean.
+        //$file = is_dir($curent_path . $id . "/" . $nom);
+        $file = is_dir($new_path . "/" . $nom);
         if ($file == true) {
 
             $font_fichier = "<i class=\"fa fa-folder-o fa-5x\" aria-hidden=\"true\"></i>";
@@ -50,16 +51,11 @@ function fichier() {
                      //création de div avec class bootstrap     // Donne l'id        // Donne son icone         // Change le nbr de caractères affiché
         // incrémentation des compteurs de création de ligne.
         $compteur++;
-        $countId++;
     }
     
     $position_actuelle = $dossier_scan; //Chemin actuel.
     echo  $curent_path . $id ;
 }
-
-
-
-
 
 
 
