@@ -10,11 +10,12 @@ function fichier() {
     $curent_path = $_POST["source"];
     $compteur = 0;
     $countId = 0;
-    $dossier_scan = '/home/ezaltar';
+    $dossier_scan = $curent_path . $id;
 
     // Condition pour déterminer les chemins des dossiers.
     if ($_POST["id"] == true) {
         $dossier_scan = $curent_path . $id;
+        
     } else {
         $dossier_scan = '/home/ezaltar';
     }
@@ -53,6 +54,7 @@ function fichier() {
     }
     
     $position_actuelle = $dossier_scan; //Chemin actuel.
+    echo  $curent_path . $id ;
 }
 
 
