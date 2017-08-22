@@ -61,13 +61,13 @@
                 </div>       
             </div>
         </div>
+
         
-        <!-- Dossier/Fichier -->
+        <!-- Dossiers/Fichiers -->
+
         <div class="container contenu padding">
             <p class="fichier"></p>
-            <div class="position_actuelle">
-                <p> </p>              
-            </div>
+           <div id="position_actuelle">/home/christian</div>
             
          </div>   
             
