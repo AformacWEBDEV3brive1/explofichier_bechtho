@@ -13,7 +13,7 @@ function fichier() {
             $('.postion_actuelle').html(result); // Capture dans la class "postion_actuelle" situé dans le HTML.
             $(".dossier").click(function () { // Fonction pour cliquer.             
                 var id = $(this).attr("id");
-                alert("click ajax : "+url+id );
+                
                 click(id, url);// Récupère l'id des div crééer en PHP.
                 
             });
@@ -26,6 +26,7 @@ function click(id, url) {
     var curent_path = $("#path").attr('placeholder');
     var new_path = curent_path + "/" + id;
     $('#path').attr("placeholder", new_path);
+    alert()
     $.ajax({//Requète quand on à cliqué.
         url: 'traitement.php',
         type: 'POST',

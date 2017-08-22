@@ -54,7 +54,7 @@ function fichier() {
     }
     
     $position_actuelle = $dossier_scan; //Chemin actuel.
-    echo  $curent_path . $id ;
+    
 }
 
 

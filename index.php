@@ -45,7 +45,10 @@
 
                 <div class="row">
 
+
                     <input class="form-control  col-3" id="path" type="text" placeholder="/home/ezaltar">
+
+
 
                 </div>       
             </div>
@@ -54,6 +57,7 @@
                     <button type="button" class="btn btn-secondary col-2"> <-- </button>
                     <button type="button" class="btn btn-secondary col-2"> --> </button>
                     <button type="submit" class="btn btn-secondary col-1"> / </button>
+
                     <input class="form-control  col-3" id="path" type="text" placeholder="/home/ezaltar">
                     <input class="form-control col-3" type="text" placeholder="Rechercher">
                     <button class="btn btn-outline-default col-1" type="submit">OK</button>                 
