@@ -35,8 +35,8 @@
             <div class="container navbar1">
                 <div class="row">
 
-                    <button type="button" class="btn btn-secondary col-2"> <-- </button>
-                    <button type="button" class="btn btn-secondary col-2"> --> </button>
+                    <button type="submit" id="retour" onclick="retour()" class="btn btn-secondary col-2"> <-- </button>
+                    <button type="submit" class="btn btn-secondary col-1"> --> </button>
                     <button type="submit" class="btn btn-secondary col-1"> / </button>              
                     <input class="form-control col-5" type="text" placeholder="Rechercher">
                     <button class="btn btn-outline-default col-1" type="submit">OK</button>
@@ -45,17 +45,17 @@
 
                 <div class="row">
 
-                    <input class="form-control  col-6 offset-3  " type="text" placeholder="Nom du dossier">
+                    <input class="form-control  col-3" id="path" type="text" placeholder="/home/christian">
 
-                </div>       
+                </div>  
+                
             </div>
-            
             <div class="container navbar2">
                 <div class="row">
-                    <button type="button" class="btn btn-secondary col-2"> <-- </button>
+                    <button type="button" onclick="retour()" id="retour" class="btn btn-secondary col-2"> <-- </button>
                     <button type="button" class="btn btn-secondary col-2"> --> </button>
                     <button type="submit" class="btn btn-secondary col-1"> / </button>
-                    <input class="form-control  col-3 " type="text" placeholder="Nom du dossier">
+                    <input class="form-control  col-3" id="path" type="text" placeholder="/home/christian">
                     <input class="form-control col-3" type="text" placeholder="Rechercher">
                     <button class="btn btn-outline-default col-1" type="submit">OK</button>                 
                 </div>       
@@ -67,7 +67,7 @@
 
         <div class="container contenu padding">
             <p class="fichier"></p>
-           <div id="position_actuelle">/home/christian</div>
+           
             
          </div>   
             
