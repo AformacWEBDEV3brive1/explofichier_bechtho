@@ -67,11 +67,7 @@
 
         <div class="container contenu padding">
             <p class="fichier"></p>
-            <div class="position_actuelle">
-                <p> </p>              
-            </div>
-            
-            
+                       
          </div>   
             
             

@@ -1,7 +1,6 @@
 fichier(); //Appelle de la fonction qui fait que ça marche.
 
 function fichier() {
-    // var url = "/home/rackmaninov/"; // Variable qu istock le chemin de départ.
     var url = $('#path').attr("placeholder");
 
     $.ajax({
@@ -24,23 +23,56 @@ function click(id, url) {
     var curent_path = $("#path").attr('placeholder');
     var new_path = curent_path + "/" + id;
     $('#path').attr("placeholder", new_path);
-    
+
     $.ajax({//Requète quand on à cliqué.
         url: 'traitement.php',
         type: 'POST',
 
-        data: {"function": "fichier", "id": id, 'new_path' : new_path},
+        data: {"function": "fichier", "id": id, 'new_path': new_path},
         success: function (result) {
 
             $(".fichier").html(result);
             // Capture dans la class "postion_actuelle" situé dans le HTML.
             $(".dossier").click(function () {
                 var id = $(this).attr("id");
-                
+
             });
             fichier();
         }
     });
 }
 
+function retour() {
+
+    var url = $('#path').attr("placeholder");
+
+    var fin_url = url.substr(-1, 1);
+
+    while (fin_url != "/") {
+        url = url.substring(0, url.length - 1);
+
+        fin_url = url.substr(-1, 1);
+
+    }
+    url = url.substring(0, url.length - 1);
+
+    $.ajax({// Requète quand on à cliqué.
+        url: 'traitement.php',
+        type: 'POST',
+
+        data: {
+            "function": "click",
+            'new_path': url
+        },
+        success: function (result) {
+
+            $(".fichier").html(result);
+            $("#path").attr("placeholder", url);
+            fichier();
+        }
+
+    });
+
+
+}
 

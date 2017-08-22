@@ -3,7 +3,6 @@
 $function = $_POST["function"]; // Fonction variable qui lance la fonction "fonction" dans l'ajax.
 $function();
 
-
 function fichier() {
     // Déclaration des variables.
     $id = $_POST["id"];
@@ -37,7 +36,7 @@ function fichier() {
         $espace = array(" ", "(", ")", "'");
         $anti_slash = array("\ ", "\(", "\)", "\'");
         $nom = str_replace($espace, $anti_slash, $nom);
-        
+
         // Montre la différence entre fichier et dossier avec un boolean.
         //$file = is_dir($curent_path . $id . "/" . $nom);
         $file = is_dir($new_path . "/" . $nom);
@@ -48,14 +47,13 @@ function fichier() {
             $font_fichier = "<i class=\"fa fa-file-o fa-5x\" aria-hidden=\"true\"></i>";
         }
         echo "<div class=\"dossier col-12 col-md-1 offset-md-1\" id = " . $nom . " >  $font_fichier  <label>" . substr($nom, 0, 17) . "</label><br> </div>";
-                     //création de div avec class bootstrap     // Donne l'id        // Donne son icone         // Change le nbr de caractères affiché
+        //création de div avec class bootstrap     // Donne l'id        // Donne son icone         // Change le nbr de caractères affiché
         // incrémentation des compteurs de création de ligne.
         $compteur++;
     }
-    
+
     $position_actuelle = $dossier_scan; //Chemin actuel.
 }
-
 
 
 ?>
