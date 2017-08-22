@@ -26,7 +26,11 @@ function click(id, url) {
     var curent_path = $("#path").attr('placeholder');
     var new_path = curent_path + "/" + id;
     $('#path').attr("placeholder", new_path);
-    alert()
+
+    
+
+    
+
     $.ajax({//Requète quand on à cliqué.
         url: 'traitement.php',
         type: 'POST',
@@ -37,7 +41,12 @@ function click(id, url) {
             $(".fichier").html(result);
             // Capture dans la class "postion_actuelle" situé dans le HTML.
             $(".dossier").click(function () {
+
                 var id = $(this).attr("id");               
+
+                var id = $(this).attr("id");
+                
+
             });
             fichier();
         }
