@@ -14,6 +14,7 @@
 	href="libraries/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
 
 
+
 <!-- libraries js -->
 <script type="text/javascript" src="libraries/jQuery/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="libraries/tether/dist/js/tether.js"></script>
@@ -44,24 +45,11 @@
 			</div>
 		</div>
 
-<<<<<<< HEAD
 	</div>
-=======
-                    <input class="form-control  col-3" id="path" type="text" placeholder="/home">
->>>>>>> branch 'master' of https://github.com/AformacWEBDEV3brive1/explofichier_bechtho.git
 
-<<<<<<< HEAD
-=======
-                </div>  
-                
-            </div>
-            
-        </div>
->>>>>>> branch 'master' of https://github.com/AformacWEBDEV3brive1/explofichier_bechtho.git
 
 	<!-- Dossiers/Fichiers -->
 
-<<<<<<< HEAD
 	<div class="container contenu padding">
 		<p class="fichier"></p>
 
@@ -71,16 +59,3 @@
 
 </body>
 </html>
-=======
-        <div class="container contenu padding">
-            <p class="fichier"></p>
-           
-            
-         </div>   
-            
-            
-            <script type="text/javascript" src="javascript.js"></script>
-        
-    </body>
-</html>
->>>>>>> branch 'master' of https://github.com/AformacWEBDEV3brive1/explofichier_bechtho.git
