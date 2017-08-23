@@ -1,10 +1,12 @@
+<!-- POur lus de compréhention: la cléf "path" = "path" -->
+
 <?php
 $function = $_POST["function"]; // Fonction variable qui lance la fonction "fonction" dans l'ajax.
 $function();
 function fichier() {
     // Déclaration des variables.
     $id = $_POST["id"];
-    $curent_path = $_POST["source"];
+    $curent_path = $_POST["path"];
     $new_path = $_POST["new_path"];
     $compteur = 0;
     $nom_utilisateur=php_uname("n");
@@ -12,7 +14,7 @@ function fichier() {
     
 
     
-    if (isset($_POST["source"])) {
+    if (isset($_POST["path"])) {
         //$dossier_scan = $curent_path . $id;
         $new_path = $curent_path;
     }
@@ -39,25 +41,41 @@ function fichier() {
         // Montre la différence entre fichier et dossier avec un boolean.
         //$file = is_dir($curent_path . $id . "/" . $nom);
         $file = is_dir($new_path . "/" . $nom);
+        
+        
+        
         if ($file == true) {
+            $dossier_clicable = "dossier";
             $font_fichier = "<i class=\"fa fa-folder-o fa-5x\" aria-hidden=\"true\"></i>";
+            //création de div avec class bootstrap
+            echo "<div class=\"text-center " . $dossier_clicable ." col-12 col-md-1 offset-md-1\" id = " . $nom . " >" // Donne l'id
+                . $font_fichier // Donne son icone 
+                . " <div> " //création de div avec class bootstrap 
+                    . "<label>" . $nom . "</label> "
+                . "</div><br>" 
+           . "</div>";
         } else {
             $font_fichier = "<i class=\"fa fa-file-o fa-5x\" aria-hidden=\"true\"></i>";
-        }
-        
-        if($file==true){
-            echo "<div class=\"text-center dossier col-12 col-md-1 offset-md-1\" id = " . $nom . " >  $font_fichier  <label>" . substr($nom, 0, 20) . "</label><br> </div>";
-        }else{ echo "<div class=\"text-center fiche col-12 col-md-1 offset-md-1\" id = " . $nom . " >  $font_fichier  <label>" . substr($nom, 0, 15) ."..."."</label><br> </div>";}
-        //création de div avec class bootstrap     // Donne l'id        // Donne son icone         // Change le nbr de caractères affiché
-                     //création de div avec class bootstrap     // Donne l'id        // Donne son icone         // Change le nbr de caractères affiché
+            $dossier_clicable = "";
+            if ( strlen($nom) > 10){ // Change le nbr de caractères affiché
+                $nom = substr($nom, 0, 10) . "...";
+            }
+            echo "<div class=\"text-center " . $dossier_clicable ." col-12 col-md-1 offset-md-1\" id = " . $nom . " >" 
+                . $font_fichier 
+                . " <div> "
+                    . "<label>" . $nom . "</label> "
+                . "</div><br>" 
+           . "</div>";
+        }             
         // incrémentation des compteurs de création de ligne.
         $compteur++;
+        
     }
 }
 function click() {
     // Déclaration des variables.
     $id = $_POST["id"];
-    $curent_path = $_POST["source"];
+    $curent_path = $_POST["path"];
     $compteur = 0;
     $nom_utilisateur = php_uname("n");
     $dossier_scan = '/home';

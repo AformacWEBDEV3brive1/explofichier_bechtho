@@ -11,14 +11,14 @@ function nom_util() {
 }
 
 function fichier() {
-        var url = $('#path').attr("placeholder");
+        var path = $('#path').attr("placeholder");
 
         $.ajax({
                 url : 'traitement.php', // cible de l'ajax.
                 type : 'POST', // Méthode de récupération des données PHP.
                 data : {
                         "function" : "fichier",
-                        'source' : url
+                        'path' : path
                 }, // Clé et donné envoyé a
                 // la page PHP.
                 success : function(result) { // Les donnée renvoyées par PHP.
@@ -26,13 +26,13 @@ function fichier() {
                         // dans le HTML.
                         $(".dossier").click(function() { // Fonction pour cliquer.
                                 var id = $(this).attr("id");
-                                click(id, url);// Récupère l'id des div crééer en PHP.
+                                click(id, path);// Récupère l'id des div crééer en PHP.
                         });
                 }
         });
 }
 
-function click(id, url) {
+function click(id, path) {
         var curent_path = $("#path").attr('placeholder');
         var new_path = curent_path + "/" + id;
         $('#path').attr("placeholder", new_path);
@@ -61,19 +61,19 @@ function click(id, url) {
 
 function retour() {
 
-        var url = $('#path').attr("placeholder");
+        var path = $('#path').attr("placeholder"); //stock "path" qui est égale à "/home".
 
-        if (url == "/home" +"/"+ nom_utilisateur) {
-                alert("retour impossible");
+        if (path == "/home" +"/"+ nom_utilisateur) { //condition pour empecher le retour.
+                alert("retour impossible"); //action.
         }else{
+             
+                var fin_path = path.substr(-1, 1); // selectionne 1 caractère en partant de la fin
 
-                var fin_url = url.substr(-1, 1);
-
-                while (fin_url != "/") {
-                        url = url.substring(0, url.length - 1);
-                        fin_url = url.substr(-1, 1);
+                while (fin_path != "/") { // condition de la boucle.
+                        path = path.substring(0, path.length - 1); // retire 1 caractère à "path" 
+                        fin_path = path.substr(-1, 1); // selectionne 1 caractère en partant de la fin
                 }
-                url = url.substring(0, url.length - 1);
+                path = path.substring(0, path.length - 1); // elève le slash qui reste après l'opération de la boucle
 
                 $.ajax({// Requète quand on à cliqué.
                         url : 'traitement.php',
@@ -81,15 +81,16 @@ function retour() {
 
                         data : {
                                 "function" : "click",
-                                'new_path' : url
+                                'new_path' : path
                         },
                         success : function(result) {
 
                                 $(".fichier").html(result);
-                                $("#path").attr("placeholder", url);
-                                fichier();
+                                $("#path").attr("placeholder", path);
+                                fichier(); //rapelle de la fonction fichier.
                         }
 
                 });
         }
 }
+
