@@ -11,18 +11,11 @@ function fichier() {
     $new_path = $_POST["new_path"];
     $compteur = 0;
 
-    echo $curent_path;
+  
     $nom_utilisateur=php_uname("n");
-    $dossier_scan = '/home/christian';
-    //echo $nom_utilisateur;
-    //echo  $dossier_scan;
- 
-    //$nom_utilisateur= php_uname("n"); 
-    $dossier_scan = '/home/rackmaninov/';
+    $dossier_scan = '/home';
 
     // Condition pour déterminer les chemins des dossiers.
-
-    
 
     if (isset($_POST["source"])) {
         //$dossier_scan = $curent_path . $id;
@@ -82,7 +75,7 @@ function fichier() {
         $compteur = 0;
         
         $nom_utilisateur=php_uname("n");
-        $dossier_scan = '/home/christian';
+        $dossier_scan = '/home';
         //echo $nom_utilisateur;
         //echo  $dossier_scan;
         
