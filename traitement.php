@@ -17,6 +17,8 @@ function fichier() {
 
     // Condition pour déterminer les chemins des dossiers.
 
+    
+
     if (isset($_POST["source"])) {
         //$dossier_scan = $curent_path . $id;
         $new_path = $curent_path;

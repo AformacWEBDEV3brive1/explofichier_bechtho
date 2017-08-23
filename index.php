@@ -44,11 +44,24 @@
 			</div>
 		</div>
 
+<<<<<<< HEAD
 	</div>
+=======
+                    <input class="form-control  col-3" id="path" type="text" placeholder="/home">
+>>>>>>> branch 'master' of https://github.com/AformacWEBDEV3brive1/explofichier_bechtho.git
 
+<<<<<<< HEAD
+=======
+                </div>  
+                
+            </div>
+            
+        </div>
+>>>>>>> branch 'master' of https://github.com/AformacWEBDEV3brive1/explofichier_bechtho.git
 
 	<!-- Dossiers/Fichiers -->
 
+<<<<<<< HEAD
 	<div class="container contenu padding">
 		<p class="fichier"></p>
 
@@ -58,3 +71,16 @@
 
 </body>
 </html>
+=======
+        <div class="container contenu padding">
+            <p class="fichier"></p>
+           
+            
+         </div>   
+            
+            
+            <script type="text/javascript" src="javascript.js"></script>
+        
+    </body>
+</html>
+>>>>>>> branch 'master' of https://github.com/AformacWEBDEV3brive1/explofichier_bechtho.git
