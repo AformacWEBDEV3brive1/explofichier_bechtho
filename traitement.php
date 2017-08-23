@@ -54,15 +54,13 @@ function fichier() {
         } else {
             $font_fichier = "<i class=\"fa fa-file-o fa-5x\" aria-hidden=\"true\"></i>";
         }
-        echo "<div class=\"dossier centrer_gauche text-center col-12 col-md-1 offset-md-1\" id = " . $nom . " > "
+        echo "<div class=\"dossier  text-center col-12 col-md-1 offset-md-1\" id = " . $nom . " > "
                 . "<div>  $font_fichier </div> "
                 . "<div> <label>" . substr($nom, 0, 17) . "</label><br> </div> "
                 . "</div>";
                      //création de div avec class bootstrap     // Donne l'id        // Donne son icone         // Change le nbr de caractères affiché
         // incrémentation des compteurs de création de ligne.
-        $compteur++;
-
-        
+        $compteur++;     
 
     }
     
@@ -120,7 +118,7 @@ function fichier() {
         } else {
             $font_fichier = "<i class=\"fa fa-file-o fa-5x\" aria-hidden=\"true\"></i>";
         }
-        echo "<div class=\"dossier centrer_gauche text-center col-12 col-md-1 offset-md-1\" id = " . $nom . " > " .
+        echo "<div class=\"dossier text-center col-12 col-md-1 offset-md-1\" id = " . $nom . " > " .
                 "<div>  $font_fichier </div> " .
                 "<label>" . substr($nom, 0, 17) . "</label> <br> " .
                 "</div>";
