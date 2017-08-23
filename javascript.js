@@ -1,4 +1,4 @@
-fichier(); //Appelle de la fonction qui fait que ça marche.
+fichier(); // Appelle de la fonction qui fait que ça marche.
 
 function fichier() {
     var url = $('#path').attr("placeholder");
@@ -6,11 +6,18 @@ function fichier() {
     $.ajax({
         url: 'traitement.php', // cible de l'ajax.
         type: 'POST', // Méthode de récupération des données PHP.
-        data: {"function": "fichier", 'source': url}, // Clé et donné envoyé a la page PHP.
-        success: function (result) { //Les donnée renvoyées par PHP.
-            $(".fichier").html(result); // Affiche dans la class "fichier" situé dans le HTML.
-            $('.postion_actuelle').html(result); // Capture dans la class "postion_actuelle" situé dans le HTML.
-            $(".dossier").click(function () { // Fonction pour cliquer.             
+        data: {
+            "function": "fichier",
+            'source': url
+        }, // Clé et donné envoyé a
+        // la page PHP.
+        success: function (result) { // Les donnée renvoyées par PHP.
+            $(".fichier").html(result); // Affiche dans la class "fichier" situé
+            // dans le HTML.
+            $('.postion_actuelle').html(result); // Capture dans la class
+            // "postion_actuelle" situé
+            // dans le HTML.
+            $(".dossier").click(function () { // Fonction pour cliquer.
                 var id = $(this).attr("id");
                 click(id, url);// Récupère l'id des div crééer en PHP.
             });
@@ -24,11 +31,15 @@ function click(id, url) {
     var new_path = curent_path + "/" + id;
     $('#path').attr("placeholder", new_path);
 
-    $.ajax({//Requète quand on à cliqué.
+    $.ajax({// Requète quand on à cliqué.
         url: 'traitement.php',
         type: 'POST',
 
-        data: {"function": "fichier", "id": id, 'new_path': new_path},
+        data: {
+            "function": "fichier",
+            "id": id,
+            'new_path': new_path
+        },
         success: function (result) {
 
             $(".fichier").html(result);
@@ -44,17 +55,17 @@ function click(id, url) {
 
 function retour() {
 
-    var url = $('#path').attr("placeholder");
+    var url = $('#path').attr("placeholder"); // Variable pour chopper l'url qui se trouve dans l'attribut placeholder.
 
-    var fin_url = url.substr(-1, 1);
+    var fin_url = url.substr(-1, 1); // Prend le dernier caractère.
 
-    while (fin_url != "/") {
-        url = url.substring(0, url.length - 1);
+    while (fin_url != "/") { // Condition: tant que le caractère n'est pas "/" il reste dans la boucle.
+        url = url.substring(0, url.length - 1); // Action: supprime le dernier caractère
 
-        fin_url = url.substr(-1, 1);
-
+        fin_url = url.substr(-1, 1); // Le nouveau dernier caractère: ("/")
     }
-    url = url.substring(0, url.length - 1);
+    
+    url = url.substring(0, url.length - 1); // Elève le slash.
 
     $.ajax({// Requète quand on à cliqué.
         url: 'traitement.php',
@@ -67,7 +78,7 @@ function retour() {
         success: function (result) {
 
             $(".fichier").html(result);
-            $("#path").attr("placeholder", url);
+            $("#path").attr("placeholder", url); // Place l'url dans le placeholder.
             fichier();
         }
 
@@ -75,4 +86,3 @@ function retour() {
 
 
 }
-

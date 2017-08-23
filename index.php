@@ -45,21 +45,12 @@
 
                 <div class="row">
 
-                    <input class="form-control  col-3" id="path" type="text" placeholder="/home/rackmaninov">
+                    <input class="form-control  col-3" id="path" type="text" placeholder="/home">
 
                 </div>  
                 
             </div>
-            <div class="container navbar2">
-                <div class="row">
-                    <button type="button" onclick="retour()" id="retour" class="btn btn-secondary col-2"> <-- </button>
-                    <button type="button" class="btn btn-secondary col-2"> --> </button>
-                    <button type="submit" class="btn btn-secondary col-1"> / </button>
-                    <input class="form-control  col-3" id="path" type="text" placeholder="/home/rackmaninov">
-                    <input class="form-control col-3" type="text" placeholder="Rechercher">
-                    <button class="btn btn-outline-default col-1" type="submit">OK</button>                 
-                </div>       
-            </div>
+            
         </div>
 
         
@@ -67,7 +58,8 @@
 
         <div class="container contenu padding">
             <p class="fichier"></p>
-                       
+           
+            
          </div>   
             
             
