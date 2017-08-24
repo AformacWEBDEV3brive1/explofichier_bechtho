@@ -2,6 +2,8 @@ var nom_utilisateur = prompt("Veuillez taper votre nom d'utilisateur :");
 nom_util();
 fichier(); // Appelle de la fonction qui fait que ça marche.
 
+/*Fonction qui s'active lors du rechargement / entrée sur la page*/
+
 function nom_util() {
         
         
@@ -9,6 +11,8 @@ function nom_util() {
         $('#path').attr("placeholder", newpath);
 
 }
+
+/*Fonction qui s'active lors du rechargement / entrée sur la page*/
 
 function fichier() {
         var path = $('#path').attr("placeholder");
@@ -31,6 +35,8 @@ function fichier() {
                 }
         });
 }
+
+/*Fonction qui s'active lorsqu'un clique sur un dossier est effectué*/
 
 function click(id, path) {
         var curent_path = $("#path").attr('placeholder');
@@ -58,6 +64,8 @@ function click(id, path) {
         });
         
 }
+
+/*Fonction qui s'active lorsque qu'un clique sur le bouton retour est effectué*/
 
 function retour() {
 
