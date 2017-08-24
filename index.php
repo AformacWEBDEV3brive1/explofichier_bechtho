@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
-
 
         <title> Explorateur de fichier</title>
         <!-- libaries css-->
@@ -19,12 +17,9 @@
 
         <link type="text/css" rel="stylesheet" href="style.css" />
 
-
-
     </head>
 
     <body class="couleur_body">
-
         <!-- navbar -->
         <div class="entete size_nav">
             <div class="container navbar1">
@@ -33,15 +28,12 @@
                     <input class="radius couleur_bar police form-control col-9 " id="path" type="text" placeholder="/home">
                 </div>    
             </div>
-
         </div>
-
 
         <!-- Dossiers/Fichiers -->
 
         <div class="container contenu padding">
             <p class="fichier"></p>
-
 
         </div>
         <script type="text/javascript" src="javascript.js"></script>

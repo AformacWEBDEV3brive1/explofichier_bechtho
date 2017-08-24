@@ -6,10 +6,8 @@ fichier(); // Appelle de la fonction qui fait que ça marche.
 
 function nom_util() {
         
-        
         var newpath = $('#path').attr("placeholder") + "/" + nom_utilisateur;
         $('#path').attr("placeholder", newpath);
-
 }
 
 /*Fonction qui s'active lors du rechargement / entrée sur la page*/
@@ -21,7 +19,7 @@ function fichier() {
                 url : 'traitement.php', // cible de l'ajax.
                 type : 'POST', // Méthode de récupération des données PHP.
                 data : {
-                        "function" : "fichier",
+                        "appelAjax" : "fichier",
                         'path' : path
                 }, // Clé et donné envoyé a
                 // la page PHP.
@@ -48,7 +46,7 @@ function click(id, path) {
                 type : 'POST',
 
                 data : {
-                        "function" : "fichier",
+                        "appelAjax" : "fichier",
                         "id" : id,
                         'new_path' : new_path
                 },
@@ -57,12 +55,10 @@ function click(id, path) {
                         $(".fichier").html(result);
                         $(".dossier").click(function() {
                                 var id = $(this).attr("id");
-
                         });
                         fichier();
                 }
         });
-        
 }
 
 /*Fonction qui s'active lorsque qu'un clique sur le bouton retour est effectué*/
@@ -88,7 +84,7 @@ function retour() {
                         type : 'POST',
 
                         data : {
-                                "function" : "click",
+                                "appelAjax" : "click",
                                 'new_path' : path
                         },
                         success : function(result) {
@@ -97,7 +93,6 @@ function retour() {
                                 $("#path").attr("placeholder", path);
                                 fichier(); //rapelle de la fonction fichier.
                         }
-
                 });
         }
 }
