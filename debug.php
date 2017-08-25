@@ -8,7 +8,7 @@ function monDebug($variable){
     if($debug == true){
         if(file_exists('/home/nathaniel/Bureau/tmp/debug.log')){
             fopen('/home/nathaniel/Bureau/tmp/debug.log', 'a+');
-            fputs('/home/nathaniel/Bureau/tmp/debug.log', $variable);
+            fwrite('/home/nathaniel/Bureau/tmp/debug.log', $variable);
             fclose('/home/nathaniel/Bureau/tmp/debug.log');
         }
         else{
@@ -23,4 +23,3 @@ function monDebug($variable){
     }
 }
 ?>
-
