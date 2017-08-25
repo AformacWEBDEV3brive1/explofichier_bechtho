@@ -6,7 +6,6 @@ $function();
 $id = $_POST["id"];
 
 /* Fonction qui affiche les dossiers */
-
 function fichier() {
     // Déclaration des variables.
 
@@ -67,7 +66,6 @@ function fichier() {
         $nbrLigne++;
     }
 }
-
 /*Fonction activer grace a la fonction retour() dans javascript.js*/
 
 function click() {
