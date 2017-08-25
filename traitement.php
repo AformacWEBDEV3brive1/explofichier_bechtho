@@ -1,6 +1,7 @@
 <!-- Pour plus de compréhention: la clef "path" = "path" -->
 
 <?php
+include 'debug.php';
 $function = $_POST["appelAjax"]; // Fonction variable qui lance la fonction "fonction" dans l'ajax.
 $function();
 $id = $_POST["id"];
@@ -8,11 +9,10 @@ $id = $_POST["id"];
 /* Fonction qui affiche les dossiers */
 function fichier() {
     // Déclaration des variables.
-
+    monDebug('demarrage de la fonction ');
     $nbrLigne = 0;
     $curent_path = $_POST["path"];
     $new_path = $_POST["new_path"];
-    $dossier_scan = '/home' . $fichiers_dossiers;
 
     if (isset($_POST["path"])) {
         $new_path = $curent_path;
@@ -65,12 +65,14 @@ function fichier() {
         // incrémentation des compteurs de création de ligne.
         $nbrLigne++;
     }
+    monDebug('finition de la fonction ');
 }
 /*Fonction activer grace a la fonction retour() dans javascript.js*/
 
 function click() {
     // Déclaration des variables.
-
+    monDebug('demarrage de la fonction ');
+    
     $nbrLigne = 0;
     $curent_path = $_POST["path"];
     $dossier_scan = '/home';
@@ -114,5 +116,6 @@ function click() {
         // incrémentation des compteurs de création de ligne.
         $nbrLigne++;
     }
+    monDebug('finition de la fonction ');
 }
 ?>
